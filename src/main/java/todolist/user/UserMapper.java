@@ -11,6 +11,5 @@ public interface UserMapper {
     User findByUsername(String username);
 
     @Insert("INSERT INTO users (username, password) VALUES (#{username}, #{password})")
-    @Options(useGeneratedKeys = true, keyProperty = "id")
     void insert(User user);
 }

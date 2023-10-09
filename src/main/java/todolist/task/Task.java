@@ -2,9 +2,16 @@ package todolist.task;
 
 public class Task {
     private Long id;
-    private Long userid;
+    private String username;
     private String description;
     private boolean isCompleted;
+
+    public Task(String username, String description) {
+        // id: GeneratedKeys by mapper
+        this.username = username;
+        this.description = description;
+        this.isCompleted = false;
+    }
 
     // Getters and setters
 
@@ -32,11 +39,11 @@ public class Task {
         isCompleted = completed;
     }
 
-    public Long getUserid() {
-        return userid;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserid(Long userid) {
-        this.userid = userid;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

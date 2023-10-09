@@ -12,13 +12,6 @@ body {
     padding: 20px;
 }
 
-/* Style the header */
-h1 {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-bottom: 20px;
-}
 
 /* Style the form for adding tasks */
 form {
@@ -87,4 +80,29 @@ li span {
     ul {
         width: 65%;
     }
+}
+
+/* Apply styles to the header */
+ .header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     display: flex;
+     justify-content: space-between; /* Align items horizontally, creating space between them */
+     align-items: center; /* Align items vertically in the center */
+ }
+
+/* Style the h1 element */
+.header h1 {
+    text-align: center;
+}
+
+/* Style the logout button */
+.logout-button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -19,15 +19,13 @@ public class UserService {
         }
     }
 
-    public Long authenticate(String username, String password) {
+    public boolean authenticate(String username, String password) {
         User user = userMapper.findByUsername(username);
         if (user != null) {
             // Compare the provided password with the stored hashed password
-            if (password.equals(user.getPassword())) {
-                return user.getId();
-            }
+            return password.equals(user.getPassword());
         }
-        return (long)-1;
+        return false;
     }
 }
 
