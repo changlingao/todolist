@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="/auth.css">
+</head>
+<body>
+<h2>Login</h2>
+<br/>
+<div class="center-container">
+<form action="/login" method="post">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br>
+  <input type="submit" value="Login">
+</form>
+</div>
+
+<!-- Display an error message if login fails -->
+<p th:if="${param.error != null}" style="color: red;">Login failed. Please check your username and password.</p>
+
+<p>Don't have an account? <a href="/register">Register</a></p>
+</body>
+</html>
